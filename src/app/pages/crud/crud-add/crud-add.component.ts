@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PokemonMockService } from 'src/app/services/api/pokemon-mock.service';
-import { Pokemon, newPokemonAdd } from 'src/app/shared/interfaces/pokemon';
+import { newPokemonAdd } from 'src/app/shared/interfaces/pokemon';
 
 @Component({
   selector: 'app-crud-add',
@@ -17,12 +17,19 @@ export class CrudAddComponent {
     image: '',
   };
 
+  isImageUrlValid: boolean = true;
   constructor(
     private router: Router,
     private pokemonService: PokemonMockService
   ) {}
 
-  createPokemon(): void {
+  createPokemon() {
+    this.validateImageUrl();
+    if (!this.isImageUrlValid) {
+      alert('Ingrese una URL válida.');
+      return;
+    }
+
     this.pokemonService.addPokemon({
       name: this.newPokemon.name,
       type: this.newPokemon.type,
@@ -37,5 +44,9 @@ export class CrudAddComponent {
 
   goBack(): void {
     this.router.navigateByUrl('/crud');
+  }
+  validateImageUrl() {
+    const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;
+    this.isImageUrlValid = urlPattern.test(this.newPokemon.image);
   }
 }

@@ -8,23 +8,23 @@
     "
     [src]="pokemon.sprites.other.dream_world.front_default"
     class="card-img-top"
-    alt="{{ pokemon.name }} Image"
+    alt="{{ pokemon.name | titlecase }} Image"
     style="height: 320px"
   />
   <div class="card-body text-center">
-    <h5 class="card-title">{{ pokemon.name }}</h5>
-    <p class="card-text">Type: {{ getTypeNames(pokemon.types) }}</p>
+    <h5 class="card-title">{{ pokemon.name | titlecase }}</h5>
+    <p class="card-text">Type: {{ getTypeNames(pokemon.types) | titlecase }}</p>
     <p class="card-text">Level: {{ pokemon.base_experience }}</p>
   </div>
   <div class="card-body">
     <ul>
       <span><h5 class="card-title">Abilities:</h5></span>
       <li *ngFor="let ability of pokemon.abilities">
-        {{ ability.ability.name }}
+        {{ ability.ability.name | titlecase }}
       </li>
       <span><h5 class="card-title">Evolutions:</h5></span>
       <li *ngFor="let evolution of evolutions">
-        {{ evolution.name }}
+        {{ evolution.name | titlecase }}
       </li>
     </ul>
   </div>

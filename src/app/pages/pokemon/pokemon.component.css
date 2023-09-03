@@ -7,28 +7,28 @@
   }
   
   .card-img-top {
-    height: 190px !important /* Altura de la imagen */ /* Ajustar la imagen al tamaño de la tarjeta */
+    height: 190px !important 
   }
   
   .card-body {
-    text-align: center; /* Centrar el texto horizontalmente */
+    text-align: center;
   }
   
   .list-group-item {
-    text-align: center; /* Centrar el texto de la lista horizontalmente */
+    text-align: center; 
   }
   
   .card-title {
-    font-size: 1.25rem; /* Tamaño de fuente para el título */
-    margin-bottom: 0.5rem; /* Espacio inferior entre el título y el texto */
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem; 
   }
   
   .card-text {
-    font-size: 1rem; /* Tamaño de fuente para el texto */
+    font-size: 1rem;
   }
   
   ul {
-    list-style-type: none; /* Eliminar viñetas de la lista */
-    padding: 0; /* Eliminar el relleno predeterminado de la lista */
+    list-style-type: none; 
+    padding: 0;
   }
   

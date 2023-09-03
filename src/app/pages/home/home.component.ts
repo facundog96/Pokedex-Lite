@@ -33,14 +33,11 @@ export class HomeComponent implements OnInit {
     this.ApiService.getData().subscribe((data: any) => {
       if (data.results) {
         const pokemonsUrl = data.results.map((pokemon: any) => pokemon.url);
-
-        // Mapear las URL en observables y luego combinarlos con forkJoin
         const requests = pokemonsUrl.map((url: string) =>
           this.ApiService.getPokemonByUrl(url)
         );
 
         forkJoin(requests).subscribe((pokemonData: any) => {
-          // pokemonData será un arreglo con los datos de todos los Pokémon
           this.pokemonList = pokemonData;
           console.log(this.pokemonList);
         });

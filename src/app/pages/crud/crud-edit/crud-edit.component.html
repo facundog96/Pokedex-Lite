@@ -2,11 +2,8 @@
   <div class="card-body text-center" *ngIf="pokemon">
     <img src="{{ pokemon.image }}" alt="{{ pokemon.name }}" />
   </div>
-
-  <!-- Formulario de Edición -->
   <div class="card-body">
     <form (ngSubmit)="savePokemon()" #pokemonForm="ngForm">
-      <!-- Nombre -->
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
         <input
@@ -18,8 +15,6 @@
           required
         />
       </div>
-
-      <!-- Tipos -->
       <div class="mb-3">
         <label for="types" class="form-label">Types</label>
         <div>
@@ -32,8 +27,6 @@
           />
         </div>
       </div>
-
-      <!-- Evoluciones -->
       <div class="mb-3">
         <label for="evolutions" class="form-label">Evolutions</label>
         <div>
@@ -45,7 +38,6 @@
           />
         </div>
       </div>
-
       <button (click)="savePokemon()" class="btn btn-warning">Save</button>
       <button type="button" class="btn btn-secondary" (click)="deletePokemon()">
         Delete

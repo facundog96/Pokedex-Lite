@@ -20,9 +20,13 @@
             alt="{{ pokemon.name }}"
           />
         </th>
-        <td class="align-middle fs-5">{{ getTypeNames(pokemon.types) }}</td>
-        <td class="align-middle fs-5">{{ pokemon.name }}</td>
-        <td class="align-middle fs-5">{{ pokemon.base_experience }}</td>
+        <td class="align-middle fs-5">
+          {{ getTypeNames(pokemon.types) | titlecase }}
+        </td>
+        <td class="align-middle fs-5">{{ pokemon.name | titlecase }}</td>
+        <td class="align-middle fs-5">
+          {{ pokemon.base_experience }}
+        </td>
       </tr>
     </tbody>
   </table>

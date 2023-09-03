@@ -73,7 +73,7 @@ export class CrudEditComponent implements OnInit {
 
   savePokemon() {
     this.pokemonService.updatePokemon(this.editedPokemon).subscribe(() => {
-      this.router.navigate(['/crud/edit/', this.editedPokemon.id]);
+      this.router.navigate(['/crud/']);
     });
   }
 }

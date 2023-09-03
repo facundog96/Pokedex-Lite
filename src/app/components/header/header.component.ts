@@ -1,7 +1,7 @@
 // header.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/services/auth/login.service'; // Asegúrate de que la ruta sea correcta
+import { LoginService } from 'src/app/services/auth/login.service';
 
 @Component({
   selector: 'app-header',
