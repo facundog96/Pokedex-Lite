@@ -1,0 +1,32 @@
+<div class="card">
+  <img
+    *ngIf="
+      pokemon &&
+      pokemon.sprites &&
+      pokemon.sprites.other &&
+      pokemon.sprites.other.dream_world.front_default
+    "
+    [src]="pokemon.sprites.other.dream_world.front_default"
+    class="card-img-top"
+    alt="{{ pokemon.name }} Image"
+    style="height: 320px"
+  />
+  <div class="card-body text-center">
+    <h5 class="card-title">{{ pokemon.name }}</h5>
+    <p class="card-text">Type: {{ getTypeNames(pokemon.types) }}</p>
+    <p class="card-text">Level: {{ pokemon.base_experience }}</p>
+  </div>
+  <div class="card-body">
+    <ul>
+      <span><h5 class="card-title">Abilities:</h5></span>
+      <li *ngFor="let ability of pokemon.abilities">
+        {{ ability.ability.name }}
+      </li>
+      <span><h5 class="card-title">Evolutions:</h5></span>
+      <li *ngFor="let evolution of evolutions">
+        {{ evolution.name }}
+      </li>
+    </ul>
+  </div>
+  <button class="btn btn-primary" (click)="goBack()">Go back!</button>
+</div>

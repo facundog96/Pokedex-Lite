@@ -1,0 +1,29 @@
+<div class="table-responsive poke-container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Type</th>
+        <th scope="col">Name</th>
+        <th scope="col">Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let pokemon of pokemonList; let i = index"
+        [routerLink]="['/pokemon/', pokemon.id]"
+      >
+        <th>
+          <img
+            class="poke-img"
+            src="{{ pokemon.sprites.other.dream_world.front_default }}"
+            alt="{{ pokemon.name }}"
+          />
+        </th>
+        <td class="align-middle fs-5">{{ getTypeNames(pokemon.types) }}</td>
+        <td class="align-middle fs-5">{{ pokemon.name }}</td>
+        <td class="align-middle fs-5">{{ pokemon.base_experience }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

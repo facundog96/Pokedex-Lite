@@ -1,0 +1,55 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <form (ngSubmit)="createPokemon()">
+      <div class="mb-3">
+        <label for="image" class="form-label">Image URL</label>
+        <input
+          type="text"
+          class="form-control"
+          id="image"
+          name="image"
+          [(ngModel)]="newPokemon.image"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          [(ngModel)]="newPokemon.name"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="types" class="form-label">Types</label>
+        <div>
+          <input
+            type="text"
+            class="form-control"
+            id="types"
+            name="types"
+            [(ngModel)]="newPokemon.type"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="evolutions" class="form-label">Evolutions</label>
+        <div>
+          <input
+            type="text"
+            class="form-control"
+            name="evolutions"
+            [(ngModel)]="newPokemon.evolution"
+          />
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">
+        Go back
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+poke-container {
+    background-color: white;
+    padding: 20px;
+}
+
+.poke-img {
+    width: 120px;
+    height: auto;
+    background-color: transparent;
+    margin-left: 50px;
+}
+
+align-middle {
+    vertical-align: middle;
+    font-size: 50px;
+}

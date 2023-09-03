@@ -1,0 +1,56 @@
+<div class="card mb-3">
+  <div class="card-body text-center" *ngIf="pokemon">
+    <img src="{{ pokemon.image }}" alt="{{ pokemon.name }}" />
+  </div>
+
+  <!-- Formulario de Edición -->
+  <div class="card-body">
+    <form (ngSubmit)="savePokemon()" #pokemonForm="ngForm">
+      <!-- Nombre -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          [(ngModel)]="editedPokemon.name"
+          required
+        />
+      </div>
+
+      <!-- Tipos -->
+      <div class="mb-3">
+        <label for="types" class="form-label">Types</label>
+        <div>
+          <input
+            type="text"
+            class="form-control"
+            id="types"
+            name="type"
+            [(ngModel)]="editedPokemon.type"
+          />
+        </div>
+      </div>
+
+      <!-- Evoluciones -->
+      <div class="mb-3">
+        <label for="evolutions" class="form-label">Evolutions</label>
+        <div>
+          <input
+            type="text"
+            class="form-control"
+            name="evolutions"
+            [(ngModel)]="editedPokemon.evolution"
+          />
+        </div>
+      </div>
+
+      <button (click)="savePokemon()" class="btn btn-warning">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="deletePokemon()">
+        Delete
+      </button>
+    </form>
+  </div>
+  <button class="btn btn-primary" (click)="goBack()">Go back!</button>
+</div>

@@ -1,0 +1,23 @@
+poke-container {
+    background-color: white;
+    padding: 20px;
+}
+
+.poke-img {
+    width: 150px !important;
+    height: auto !important;
+    background-color: transparent;
+    margin-left: 50px;
+}
+
+align-middle {
+    vertical-align: middle;
+    font-size: 50px;
+}
+
+.floating-button {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important; 
+    z-index: 1000 !important; 
+  }
