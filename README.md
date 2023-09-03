@@ -1,4 +1,4 @@
-PokeAPI Lite
+
 PokeAPI Lite es una aplicación Angular que permite a los entrenadores Pokémon explorar información sobre sus criaturas favoritas. La aplicación consume datos de PokeAPI para mostrar una lista de Pokémon y proporciona funcionalidades CRUD (Crear, Leer, Actualizar, Eliminar) a través de un servicio de simulación (mock), ya que PokeAPI solo admite peticiones GET.
 
 Características Principales
